@@ -4,96 +4,90 @@
 		<meta charset="UTF-8" />
 		<title>bomicbon</title>
 		<script type="text/javascript" src="src/phaser.min.js"></script>
+		<script type="text/javascript" src="src/p5.min.js"></script>
+		<script type="text/javascript" src="src/sketch.js"></script>
+		<script type="text/javascript" src="src/game.js"></script>
+		 
 		<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-		<style type="text/css">
-			body {
-				margin:0;
-			}
-		</style> 
-		<script src="src/boot.js"></script>
-		<script src="src/preload.js"></script>
-		<script src="src/game.js"></script>
+		<link rel="stylesheet" type="text/css" href"src/style.css">
+				<style>
+					html, body {
+						height: 100%;
+					}
+					body {
+						margin: 0;
+						display: flex;
+						
+						/* This centers our sketch horizontally */
+						justify-content: center;
+
+						/* This centers our sketch vertically. */
+						align-items: center;
+					}
+					h1 {
+						color: white;
+						font-size: 4.0em;
+						text-shadow: 3px 0px 2px dimgray, -3px 0px 2px dimgray, 0px 3px 2px dimgray, 0px -3px 2px dimgray;
+						letter-spacing: 2.0px;
+						position: absolute;
+						text-align: center;
+						margin: 0 auto;
+						top: 25.5%;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						z-index: 1;
+						width: 50%;
+						padding: 0px;
+					}
+					#welcome {
+						display: inline-block;
+						position: relative;
+						margin: 0 auto;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						float: left;
+						z-index: 100;
+					}
+					#wrapper{
+						position: absolute;
+						margin: auto;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						z-index: 1;
+						width: 320px;
+						height: 288px;
+						overflow:hidden;
+						border:solid 10px #fff;
+						border-style: outset;
+						border-radius: 10px;
+						padding: 0px;
+						/*float: left;*/
+					}
+					#sketch-holder {
+						position: absolute;
+						margin: auto;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						float: left;
+						z-index:-5;
+					}
+				</style>  	
 	</head>
-	<body bgcolor="#ffe6dd">
+	<body>
 		<h1 style="font-family: 'Patua One'; margin: 0 auto"> bomicbon </h1>
-		<div id="wrapper" name="wrapper">
-			<div id="gamecontainer" name="gamecontainer" scrolling="no">
+		<div id="sketch-holder">
+			<div id="wrapper" name="wrapper">
+				<div id="gamecontainer" name="gamecontainer" scrolling="no">
+				</div>
 			</div>
 		</div>
-		<style>
-			h1 {
-				font-size: 3.5em;
-				position: absolute;
-				text-align: center;
-				margin: 0 auto;
-				top: 25%;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				z-index: 1;
-				width: 50%;
-				padding: 0px;
-			}
-			#welcome {
-				display: inline-block;
-				position: relative;
-				margin: 0 auto;
-				float: left;
-			}
-			#wrapper{
-				position: absolute;
-				margin: auto;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				z-index: -1;
-				width: 320px;
-				height: 288px;
-				overflow:hidden;
-				border:solid 10px #fff;
-				border-style: outset;
-				border-radius: 10px;
-				padding: -1px;
-				/*float: left;*/
-			}
-		</style>
 
-		<script type="text/javascript">
-			var game = new Phaser.Game(320, 288, Phaser.AUTO, 'welcome', {preload: preload, create: create, update: update});
-			function preload() {
-				this.game.scale.pageAlignHorizontally = true;
-				this.game.scale.pageAlignVertically = true;
-				//game.load.image('sky', 'assets/sky.png');
-				//game.load.spritesheet('dude', 'assets/dude.png');
-			}
-			var platforms;
-			function create() {
-				game.stage.backgroundColor = "#7D8C54";
-				//game.add.sprite(0, 0, 'star');
-				//game.physics.startSystem(Phaser.Physics.ARCADE);
-
-				// A simple background for our game
-				//game.add.sprite(0, 0, 'sky');
-
-				// The platforms group contains the ground and the 2 ledges we can jump on
-				//platforms = game.add.group();
-
-				// We will enable physics for any object that is created in this group
-				//platforms.enableBody = true;
-
-				// Here we create the ground.
-				//var ground = platforms.create(0, game.world.height - 64, 'ground');
-
-				// Scale it to fit the width of the game (the original sprite is 400x32 in size)
-				//ground.scale.setTo(2, 2);
-
-				// This stops it from falling away when you jump on it
-				//ground.body.immovable = true;
-			}
-			function update() {
-
-			}
-		</script> 
 	</body>
 </html>

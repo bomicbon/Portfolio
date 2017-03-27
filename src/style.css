@@ -1,0 +1,52 @@
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	display: flex;
+	/* This centers our sketch horizontally */
+	justify-content: center;
+
+	/* This centers our sketch vertically. */
+	align-items: center;
+}
+h1 {
+	color: white;
+	font-size: 4.0em;
+	text-shadow: 3px 0px 2px dimgray, -3px 0px 2px dimgray, 0px 3px 2px dimgray, 0px -3px 2px dimgray;
+	letter-spacing: 2.0px;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	top: 25.5%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 50%;
+	padding: 0px;
+}
+#welcome {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	float: left;
+	z-index: 3;
+}
+#wrapper{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	width: 320px;
+	height: 288px;
+	overflow:hidden;
+	border:solid 10px #fff;
+	border-style: outset;
+	border-radius: 10px;
+	padding: 0px;
+	/*float: left;*/
+}
