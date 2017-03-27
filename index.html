@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>bomicbon</title>
 		<script type="text/javascript" src="src/phaser.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 		<style type="text/css">
 			body {
 				margin:0;
@@ -14,31 +15,47 @@
 		<script src="src/game.js"></script>
 	</head>
 	<body bgcolor="#ffe6dd">
-		<style>
-		</style>
+		<h1 style="font-family: 'Patua One'; margin: 0 auto"> bomicbon </h1>
 		<div id="wrapper" name="wrapper">
 			<div id="gamecontainer" name="gamecontainer" scrolling="no">
 			</div>
 		</div>
 		<style>
+			h1 {
+				font-size: 3.5em;
+				position: absolute;
+				text-align: center;
+				margin: 0 auto;
+				top: 25%;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				width: 50%;
+				padding: 0px;
+			}
 			#welcome {
+				display: inline-block;
 				position: relative;
 				margin: 0 auto;
 				float: left;
 			}
 			#wrapper{
 				position: absolute;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
 				width: 320px;
 				height: 288px;
-				top: 33%;
-				left: 36.25%;
 				overflow:hidden;
 				border:solid 10px #fff;
 				border-style: outset;
-				border-radius: 20px;
-				margin: 0 auto;
-				padding: 10px;
-				float: left;
+				border-radius: 10px;
+				padding: -1px;
+				/*float: left;*/
 			}
 		</style>
 
