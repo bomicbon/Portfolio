@@ -7,7 +7,7 @@ var game = new Phaser.Game(320, 288, Phaser.AUTO, 'welcome', {preload: preload, 
 			}
 			var platforms;
 			function create() {
-				game.stage.backgroundColor = "#7D8C54";
+				game.stage.backgroundColor = "#B0DBF2";
 				//game.add.sprite(0, 0, 'star');
 				//game.physics.startSystem(Phaser.Physics.ARCADE);
 
